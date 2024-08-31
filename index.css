@@ -1,0 +1,66 @@
+/* index.css */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: sans-serif;
+  border: none;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: black;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: 50px repeat(3, 80px) 60px;
+  gap: 5px;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    width: 490px;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: 50px repeat(3, 80px) 60px;
+    gap: 5px;
+  }
+}
+
+.square {
+  background-color: red;
+}
+
+.turn {
+  background-color: green;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.score {
+  background-color: blue;
+}
+
+.actions {
+  background-color: blueviolet;
+}
+
+footer p {
+  margin-top: 10%;
+  color: white;
+}
+
+footer a {
+  margin-top: 10%;
+  color: orange;
+}
